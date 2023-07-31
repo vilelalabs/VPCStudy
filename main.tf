@@ -13,6 +13,7 @@ module "vpc" {
 module "ec2" {
   source         = "./modules/ec2"
   sg-public      = module.vpc.sg-public
+  sg-private     = module.vpc.sg-private
   subnet-public  = module.vpc.subnet-public
   subnet-private = module.vpc.subnet-private
   igw            = module.vpc.igw

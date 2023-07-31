@@ -1,4 +1,5 @@
 variable "sg-public" {}
+variable "sg-private" {}
 variable "subnet-public" {}
 variable "subnet-private" {}
 variable "igw" {}

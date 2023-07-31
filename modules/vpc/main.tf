@@ -112,3 +112,26 @@ resource "aws_security_group" "sg-public" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_security_group" "sg-private" {
+  vpc_id      = aws_vpc.vpc.id
+  name        = "sg_private"
+  description = "Allow inbound traffic from same VPC instance and all outbound traffic"
+
+  ingress {
+    description = "VPC Allow"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "-1"
+    cidr_blocks = ["10.0.0.0/16"]
+  }
+  egress {
+    description = "All traffic"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+
+}

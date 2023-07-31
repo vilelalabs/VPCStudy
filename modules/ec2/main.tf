@@ -21,7 +21,7 @@ resource "aws_instance" "ec2-private" {
   instance_type = var.ec2_instance_type
   key_name      = var.key_name
 
-  vpc_security_group_ids = [var.sg-public.id] # for test - using same sg
+  vpc_security_group_ids = [var.sg-private.id] # for test - using same sg
   subnet_id              = var.subnet-private.id
 
   tags = {

@@ -17,3 +17,7 @@ output "igw" {
 output "sg-public" {
   value = aws_security_group.sg-public
 }
+
+output "sg-private" {
+  value = aws_security_group.sg-private
+}
