@@ -1,0 +1,10 @@
+*.pem
+*.tfvars
+
+*.tfstate
+*.tfstate.backup
+
+# Ignore any .terraform directories
+.terraform
+
+.terraform.lock.hcl
